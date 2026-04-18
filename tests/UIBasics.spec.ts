@@ -14,10 +14,14 @@ test('Browser playwright test', async ({ browser })=> {
 
 });
 
-/*test('Page playwright test', async ({ page })=> {
+test('Page playwright test', async ({ page })=> {
 
     await page.goto("https://www.Google.com/")
     console.log(await page.title());
     await expect(page).toHaveTitle("Google")
+    await page.locator('#identifierId').fill('nithinreddy1781@gmail.com')
+    await page.locator("xpath=//*[contains(text(), 'Next')]").click();
+    await page.locator('[type="password"]').fill('nithinreddy770');
+    await page.locator("xpath=//*[contains(text(), 'Next')]").click();
 
-});*/
+});
